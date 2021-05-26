@@ -12,16 +12,18 @@ class MyApp extends StatelessWidget {
       backgroundColor: Colors.black,
       body: SafeArea(
         child: Column(
-          children: [
-            Spacer(flex: 1),
-            Text("Welcome to our Neon Messaging App",
+          children: <Widget>[
+            Text("Neon",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
-                    fontSize: 20)),
-            Spacer(flex: 2),
-            Image.asset("images/call.png"),
+                    fontSize: 40)),
+            Container(
+              padding: EdgeInsets.all(60),
+              child: Image.asset("images/call.png"),
+              width: 400,
+            ),
             Text(" \nYour privacy is our priority!",
                 textAlign: TextAlign.center,
                 style: TextStyle(color: Colors.white, fontSize: 16)),
