@@ -13,50 +13,64 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.black,
         body: SafeArea(
-          child: Column(
-            children: <Widget>[
-              Container(
-                child: Column(
-                  children: <Widget>[
-                    Text(
-                      "Welcome To",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(color: Colors.white, fontSize: 15),
-                    ),
-                    Text(
-                      "Neon",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: Colors.teal[100],
-                        fontWeight: FontWeight.bold,
-                        fontSize: 40,
+          child: Center(
+            child: Column(
+              children: <Widget>[
+                Container(
+                  child: Column(
+                    children: <Widget>[
+                      Text(
+                        "Welcome To",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(color: Colors.white, fontSize: 15),
                       ),
-                    ),
-                  ],
+                      Text(
+                        "Neon",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Colors.teal[200],
+                          fontWeight: FontWeight.bold,
+                          fontSize: 40,
+                        ),
+                      ),
+                    ],
+                  ),
+                  padding: EdgeInsets.only(
+                    top: 40,
+                  ),
                 ),
-                padding: EdgeInsets.only(
-                  top: 40,
+                Container(
+                  padding: EdgeInsets.all(60),
+                  child: Image.asset("images/call.png"),
+                  width: 400,
                 ),
-              ),
-              Container(
-                padding: EdgeInsets.all(60),
-                child: Image.asset("images/call.png"),
-                width: 400,
-              ),
-              Text(" \nYour privacy is our priority!",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(color: Colors.white, fontSize: 16)),
-              FlatButton(
-                onPressed: () {
-                  runApp(SigninOrSignupScreen());
-                },
-                child: Row(
-                  children: [
-                    Text("SKIP", style: TextStyle(color: Colors.green)),
-                  ],
+                Spacer(),
+                Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Column(
+                    children: <Widget>[
+                      Text(" \nYour privacy is our priority!",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(color: Colors.white, fontSize: 16)),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 20.0),
+                        child: FloatingActionButton.extended(
+                          onPressed: () {
+                            runApp(SigninOrSignupScreen());
+                          },
+                          backgroundColor: Colors.teal[400],
+                          focusColor: Colors.teal[800],
+                          hoverColor: Colors.teal[500],
+                          label: Text("Next",
+                              style: TextStyle(color: Colors.white)),
+                          icon: Icon(Icons.navigate_next_rounded),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
