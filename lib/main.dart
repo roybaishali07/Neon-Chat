@@ -58,7 +58,12 @@ class MyApp extends StatelessWidget {
                     backgroundColor: Colors.teal[400],
                     focusColor: Colors.teal[800],
                     hoverColor: Colors.tealAccent,
-                    label: Text("Next", style: TextStyle(color: Colors.white)),
+                    label: Row(
+                      children: <Widget>[
+                        Text("Next", style: TextStyle(color: Colors.white)),
+                        Icon(Icons.navigate_next)
+                      ],
+                    ),
                     //icon: Icon(Icons.navigate_next_rounded),
                   ),
                 ),
