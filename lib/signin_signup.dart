@@ -18,6 +18,7 @@ class SigninOrSignupScreen extends StatelessWidget {
                     'images/user_avatar.png',
                     height: 170,
                   ),
+                  Spacer(),
                   FloatingActionButton.extended(
                     onPressed: () {
                       runApp(Chat());
