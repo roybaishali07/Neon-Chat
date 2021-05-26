@@ -1,5 +1,7 @@
 //import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import './main.dart';
+import './chat.dart';
 
 class SigninOrSignupScreen extends StatelessWidget {
   Widget build(BuildContext context) {
@@ -15,6 +17,27 @@ class SigninOrSignupScreen extends StatelessWidget {
                   Image.asset(
                     'images/user_avatar.png',
                     height: 170,
+                  ),
+                  FloatingActionButton.extended(
+                    onPressed: () {
+                      runApp(Chat());
+                    },
+                    backgroundColor: Colors.teal[400],
+                    focusColor: Colors.teal[800],
+                    hoverColor: Colors.teal[500],
+                    label:
+                        Text("Log in", style: TextStyle(color: Colors.white)),
+                    icon: Icon(Icons.navigate_next_rounded),
+                  ),
+                  FloatingActionButton.extended(
+                    onPressed: () {
+                      runApp(MyApp());
+                    },
+                    backgroundColor: Colors.teal[400],
+                    focusColor: Colors.teal[800],
+                    hoverColor: Colors.teal[500],
+                    label: Text("Back", style: TextStyle(color: Colors.white)),
+                    icon: Icon(Icons.navigate_next_rounded),
                   ),
                 ],
               ),
