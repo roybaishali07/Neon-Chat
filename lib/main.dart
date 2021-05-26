@@ -44,29 +44,22 @@ class MyApp extends StatelessWidget {
                   child: Image.asset("images/call.png"),
                   width: 400,
                 ),
+                Spacer(flex: 3),
+                Text(" \nYour privacy is our priority!",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(color: Colors.white, fontSize: 16)),
                 Spacer(),
                 Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: Column(
-                    children: <Widget>[
-                      Text(" \nYour privacy is our priority!",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(color: Colors.white, fontSize: 16)),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 20.0),
-                        child: FloatingActionButton.extended(
-                          onPressed: () {
-                            runApp(SigninOrSignupScreen());
-                          },
-                          backgroundColor: Colors.teal[400],
-                          focusColor: Colors.teal[800],
-                          hoverColor: Colors.teal[500],
-                          label: Text("Next",
-                              style: TextStyle(color: Colors.white)),
-                          icon: Icon(Icons.navigate_next_rounded),
-                        ),
-                      ),
-                    ],
+                  padding: const EdgeInsets.only(top: 10, bottom: 30),
+                  child: FloatingActionButton.extended(
+                    onPressed: () {
+                      runApp(SigninOrSignupScreen());
+                    },
+                    backgroundColor: Colors.teal[400],
+                    focusColor: Colors.teal[800],
+                    hoverColor: Colors.tealAccent,
+                    label: Text("Next", style: TextStyle(color: Colors.white)),
+                    //icon: Icon(Icons.navigate_next_rounded),
                   ),
                 ),
               ],
