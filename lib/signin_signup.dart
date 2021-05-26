@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 class SigninOrSignupScreen extends StatelessWidget {
@@ -7,7 +8,10 @@ class SigninOrSignupScreen extends StatelessWidget {
         body: SafeArea(
           child: Column(
             children: [
-              Image.asset('images/neon.png')
+              Image.asset(
+                'images/neon.png',
+                height: 146,
+              ),
             ],
           ),
         ),
