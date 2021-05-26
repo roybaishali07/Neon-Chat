@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
                       "Neon",
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        color: Colors.white,
+                        color: Colors.teal[100],
                         fontWeight: FontWeight.bold,
                         fontSize: 40,
                       ),
@@ -46,7 +46,7 @@ class MyApp extends StatelessWidget {
               Text(" \nYour privacy is our priority!",
                   textAlign: TextAlign.center,
                   style: TextStyle(color: Colors.white, fontSize: 16)),
-              TextButton(
+              FlatButton(
                 onPressed: () {
                   runApp(SigninOrSignupScreen());
                 },
