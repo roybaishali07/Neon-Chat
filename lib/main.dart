@@ -13,12 +13,14 @@ class MyApp extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
+            Spacer(flex: 1),
             Text("Welcome to our Neon Messaging App",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
                     fontSize: 20)),
+            Spacer(flex: 2),
             Image.asset("images/call.png"),
             Text(" \nYour privacy is our priority!",
                 textAlign: TextAlign.center,
