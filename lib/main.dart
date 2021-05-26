@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './signinOrSignUp/signin_signup.dart';
+import './signin_signup.dart';
 
 void main() {
   runApp(MyApp());
@@ -47,7 +47,9 @@ class MyApp extends StatelessWidget {
                   textAlign: TextAlign.center,
                   style: TextStyle(color: Colors.white, fontSize: 16)),
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  runApp(SigninOrSignupScreen());
+                },
                 child: Row(
                   children: [
                     Text("SKIP", style: TextStyle(color: Colors.green)),
