@@ -7,7 +7,7 @@ void main() {
 
 class MyApp extends StatelessWidget {
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext ctx) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
@@ -53,6 +53,13 @@ class MyApp extends StatelessWidget {
                   padding: const EdgeInsets.only(top: 10, bottom: 30),
                   child: FloatingActionButton.extended(
                     onPressed: () {
+                      /*
+                      Navigator.push(
+                        ctx,
+                        MaterialPageRoute(
+                            builder: (ctx) => SigninOrSignupScreen()),
+                        
+                      );*/
                       runApp(SigninOrSignupScreen());
                     },
                     backgroundColor: Colors.teal[400],

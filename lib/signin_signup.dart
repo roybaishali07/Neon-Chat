@@ -4,7 +4,7 @@ import './main.dart';
 import './chat.dart';
 
 class SigninOrSignupScreen extends StatelessWidget {
-  Widget build(BuildContext context) {
+  Widget build(BuildContext ctx) {
     return MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.black,
@@ -32,7 +32,7 @@ class SigninOrSignupScreen extends StatelessWidget {
                       hoverColor: Colors.teal[500],
                       label:
                           Text("Log in", style: TextStyle(color: Colors.white)),
-                      icon: Icon(Icons.navigate_next_rounded),
+                      icon: Icon(Icons.login_rounded),
                     ),
                   ),
                   Container(
@@ -40,16 +40,16 @@ class SigninOrSignupScreen extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.only(top: 10.0),
                       child: FloatingActionButton.extended(
-                        onPressed: () {
-                          runApp(MyApp());
-                        },
-                        backgroundColor: Colors.teal[400],
-                        focusColor: Colors.teal[800],
-                        hoverColor: Colors.teal[500],
-                        label:
-                            Text("Back", style: TextStyle(color: Colors.white)),
-                        icon: Icon(Icons.navigate_next_rounded),
-                      ),
+                          onPressed: () {
+                            runApp(MyApp());
+                            //Navigator.pop(ctx);
+                          },
+                          backgroundColor: Colors.teal[400],
+                          focusColor: Colors.teal[800],
+                          hoverColor: Colors.teal[500],
+                          label: Text("Back",
+                              style: TextStyle(color: Colors.white)),
+                          icon: Icon(Icons.navigate_before_rounded)),
                     ),
                   ),
                   Spacer(),
